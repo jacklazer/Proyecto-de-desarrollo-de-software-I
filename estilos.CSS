@@ -8,3 +8,62 @@ ul ul {
     display: block;
   }
   
+
+  .busqueda_u {
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+    top: 60px;
+    left: 80px;
+  }
+
+  .btn-ventana {
+    width: 100%; /* El botón ocupará todo el ancho del div */
+    
+  }
+
+
+            /* Estilo para el contenedor de la ventana 1 */
+            .ventana-1 {
+              width: 400px;
+              height: 400px;
+              overflow: auto; /* Activa la barra de desplazamiento cuando sea necesario */
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin: 20px;
+              position: relative;
+              top: 50px;
+              left: 80px; 
+          }
+  
+            /* Estilo para el contenedor de la ventana 2 */
+            .ventana-2 {
+              width: 400px;
+              height: 400px;
+              overflow: auto; /* Activa la barra de desplazamiento cuando sea necesario */
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin: 20px;
+              position: relative;
+              top: 50px;
+              left: 100px; 
+          }
+
+
+.div-foto {
+  width: 100%; 
+  height: 100px;
+}
+
+.btn {
+  background-color: #A9A9A9; /* Color de fondo personalizado */
+  border-color: black;
+  color: #ffffff; /* Color del texto personalizado */
+  /* Otros estilos personalizados, como bordes, márgenes, etc. */
+}
+
+.btn:hover {
+  background-color: red;
+}
