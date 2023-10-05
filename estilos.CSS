@@ -1,0 +1,10 @@
+/* Ocultar el submenú por defecto */
+ul ul {
+    display: none;
+  }
+  
+  /* Mostrar el submenú cuando el usuario pasa el mouse sobre el elemento principal */
+  ul li:hover ul {
+    display: block;
+  }
+  
