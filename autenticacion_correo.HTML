@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="cap()">
     <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Empresa XD</a>
@@ -72,17 +72,59 @@
                 <div class="form-group py-1 pb-2">
                     <div class="input-field"> <input type="password" placeholder="Contraseña" required class=""> <button class="btn bg-white text-muted">  </button> </div>
                 </div>
-                <div class="d-flex align-items-start">
-                    
-                    <div class="ml-auto"> <a href="#" id="forgot">¿Olvidó su contraseña?</a> </div>
+                
+                <!-- Captcha -->
+                <label>Enter Captcha:</label>
+                <div class="row">
+                    <div class = "form-group col-md-6">
+                        <input type = "text" class = "form-control" readonly id = "capt">
+                    </div>
+                    <div class = "form-group col-md-6">
+                        <input type = "text" class = "form-control" id = "textinput">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start">    
+
+                <div class="ml-auto"> <a href="#" id="forgot">¿Olvidó su contraseña?</a> </div>
             </div>
            
-            </div> <button class="btn btn-block text-center my-3">Ingresar</button> <br>
+            </div> <button onclick="validcap()" class="btn btn-block text-center my-3">Ingresar</button> <br>
             
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        function cap() {
+            var alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                         'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+                         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                         's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '+' ];
+            var a = alpha[Math.floor(Math.random()*71)];
+            var b = alpha[Math.floor(Math.random()*71)];
+            var c = alpha[Math.floor(Math.random()*71)];
+            var d = alpha[Math.floor(Math.random()*71)];
+            var e = alpha[Math.floor(Math.random()*71)];
+            var f = alpha[Math.floor(Math.random()*71)];
+
+            var final = a+b+c+d+e+f;
+            document.getElementById("capt").value = final;
+
+        }
+        function validcap() {
+            var string1 = document.getElementById('capt').value;
+            var string2 = document.getElementById('textinput').value;
+            if(string1 == string2) {
+                alert("Es correcto el formulario")
+                return true
+            } else {
+                alert("Por favor inserta un captcha valido")
+                return false
+            }
+        }
+    </script>
 </body>
 
 </html>
